@@ -18,6 +18,7 @@ public class Parent_Disk extends AppCompatActivity {
         setContentView(R.layout.activity_parent__disk);
 
 
+        //check
         btn_P_R_Child = findViewById(R.id.btn_P_R_Child);
         btn_P_Complaint = findViewById(R.id.btn_P_Complaint);
 
