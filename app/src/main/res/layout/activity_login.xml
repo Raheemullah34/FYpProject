@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".LoginActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/poliicon"
+        android:src="@drawable/polio_icon"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/poliicon"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="enter user name"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:background="@drawable/background_button"
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <EditText
+
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:padding="20dp"
+            android:hint="enter password"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+        <Button
+            android:onClick="loginFun"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:text="Login"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+           android:background="@drawable/background_button"
+            >
+
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

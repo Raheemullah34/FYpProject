@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">FYp Project</string>
+    <string name="verb">FYp Project</string>
+    <string name="duties">View Duties</string>
+    <string name="assignDuties">Assign Duties</string>
+    <string name="address_duties">Area,Street</string>
+    <string name="add_duty">Add Duty</string>
+    <string name="select_date_lable">Select Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="team_a">Team A</string>
+    <string name="peshawar">Peshawar Peshawar Peshawar Peshawar PeshawarPeshawar Peshawar Peshawar Peshawar  Peshawar</string>
+    <string name="status">Status</string>
+    <string name="assign_date">Assign Date:</string>
+    <string name="btn_searchdata">Search</string>
+    <string name="location">Location</string>
+
+
+    <string-array name="TEAM">
+
+        <item>Select Team</item>
+        <item>TEAM_A</item>
+        <item>TEAM_B</item>
+        <item>TEAM_C</item>
+        <item>TEAM_D</item>
+
+
+    </string-array>
+    <string-array name="Cities">
+
+        <item>Select City</item>
+        <item>Peshawar</item>
+        <item>Lahore</item>
+        <item>Islamabad</item>
+        <item>Karachi</item>
+
+
+    </string-array>
+
+
+    <string-array name="TEAM_Pos">
+
+        <item>Select Position</item>
+        <item>Head</item>
+        <item>Worker</item>
+    </string-array>
+
+    <string-array name="TeamID">
+
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+
+
+    </string-array>
+
+    <string name="latitude_label">Latitude</string>
+    <string name="longitude_label">Longitude</string>
+
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="team_name">Team Name:</string>
+    <string name="des">Description:</string>
+    <string name="date">Date:</string>
+    <string name="sendrName">Sender Name</string>
+    <string name="father_name">Father Name</string>
+    <string name="familyNo">Family No</string>
+    <string name="email_txt">Email</string>
+    <string name="password_txt">Password</string>
+    <string name="default_notification_channel_id">845848</string>
+
+</resources>

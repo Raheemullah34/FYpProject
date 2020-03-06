@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".TeamHeadDuties">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/header_top"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_weight="1"
+                android:text="2019-11-20"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:id="@+id/start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></EditText>
+            <TextView
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="to"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <EditText
+                android:layout_weight="1"
+                android:text="2019-11-20"
+                android:id="@+id/end_date"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></EditText>
+
+        </LinearLayout>
+        <Button
+            android:onClick="search_between_dates"
+            android:id="@+id/search_btn"
+            android:text="@string/btn_searchdata"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/header_top"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:id="@+id/header"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:text="@string/location"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            android:text="@string/status"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/header"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+</RelativeLayout>

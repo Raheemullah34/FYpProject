@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    tools:context=".View_Report_Disk">
+
+
+    <LinearLayout
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <Button
+            android:id="@+id/btn_Vteam_Report"
+            android:textSize="25dp"
+            android:text="Team Report"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"/>
+
+
+        <Button
+            android:textSize="25dp"
+            android:id="@+id/btn_Vparent_Feedback"
+            android:text="Parent Feedback"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
