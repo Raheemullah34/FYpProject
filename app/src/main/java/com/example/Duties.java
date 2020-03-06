@@ -18,6 +18,7 @@ public class Duties extends AppCompatActivity {
         setContentView(R.layout.activity_duties);
     }
 
+    /*check update method*/
     public void viewDuties(View view) {
         Intent intent = new Intent(Duties.this, ViewDuties.class);
         startActivity(intent);
