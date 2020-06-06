@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.example.fypproject.Constants.AppConstants;
@@ -132,6 +133,7 @@ public class SettingsActivity extends AppCompatActivity {
                             mProgressDialog.dismiss();
                             Log.d(AppConstants.TAG,"  onSuccess changePassword "+response);
 
+                            Toast.makeText(SettingsActivity.this, "Password Change Successfully", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
