@@ -17,7 +17,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class Worker_Disk extends AppCompatActivity {
 
 
-    Button btn_W_R_Child,btn_W_S_DutyDetail,btn_logut;
+    Button btn_W_R_Child,btn_W_S_DutyDetail,btn_logut,btn_W_S_Settings;
     MySharePreferences mySharePreferences;
     Worker worker;
 
@@ -46,6 +46,7 @@ public class Worker_Disk extends AppCompatActivity {
         btn_W_R_Child = findViewById(R.id.btn_W_R_Child);
         btn_W_S_DutyDetail = findViewById(R.id.btn_W_S_DutyDetail);
         btn_logut=findViewById(R.id.btnlogouthead);
+        btn_W_S_Settings=findViewById(R.id.btn_W_S_Settings);
 
 
         btn_W_R_Child.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +79,14 @@ public class Worker_Disk extends AppCompatActivity {
         });
 
 
+        btn_W_S_Settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Worker_Disk.this,SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

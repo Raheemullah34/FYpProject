@@ -573,6 +573,134 @@ public void teamLoginActivity(String url, final Worker workerObj, final VolleyRe
     /*sendReportByHead*/
 
 
+
+
+    /*bring Head Data*/
+
+    public void bringHeadData(String url, final String id, final VolleyResponseListener volleyResponseListener){
+        try {
+            final RequestQueue queue = Volley.newRequestQueue(mContext);
+
+            StringRequest req = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String s) {
+                            volleyResponseListener.onSuccess(s);
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    volleyResponseListener.onError(volleyError);
+                    Log.v("see error responce",volleyError.toString());
+                }
+            })
+
+            {
+
+
+                @Override
+                protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                    Log.v("see error responce",response.toString());
+                    return super.parseNetworkResponse(response);
+
+
+                }
+
+                @Override
+                protected Map<String, String> getParams(){
+                    HashMap<String, String> params = new HashMap<String, String>();
+
+                    String workerName,workerContact,workerCnic,workerFatherName,WorkerJobStatus;
+                    int workerTeam;
+
+                    http://alefcabs.com/dev/apis/pax_login.php?pax_mobile_number=0303&pax_password=alifcabs
+                    params.put("id",id);
+
+
+
+
+
+                    return params;
+                }
+            };
+            queue.add(req);
+
+
+
+        }catch (Exception e){
+            Log.v("see error responce",e.toString());
+
+        }
+
+    }
+
+    /*bring Head Data*/
+
+
+
+    /*Change Head password*/
+
+    public void changePassword(String url, final String id, final String password, final VolleyResponseListener volleyResponseListener){
+        try {
+            final RequestQueue queue = Volley.newRequestQueue(mContext);
+
+            StringRequest req = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String s) {
+                            volleyResponseListener.onSuccess(s);
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    volleyResponseListener.onError(volleyError);
+                    Log.v("see error responce",volleyError.toString());
+                }
+            })
+
+            {
+
+
+                @Override
+                protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                    Log.v("see error responce",response.toString());
+                    return super.parseNetworkResponse(response);
+
+
+                }
+
+                @Override
+                protected Map<String, String> getParams(){
+                    HashMap<String, String> params = new HashMap<String, String>();
+
+                    String workerName,workerContact,workerCnic,workerFatherName,WorkerJobStatus;
+                    int workerTeam;
+
+                    http://alefcabs.com/dev/apis/pax_login.php?pax_mobile_number=0303&pax_password=alifcabs
+                    params.put("id",id);
+                    params.put("password",password);
+
+
+
+
+
+                    return params;
+                }
+            };
+            queue.add(req);
+
+
+
+        }catch (Exception e){
+            Log.v("see error responce",e.toString());
+
+        }
+
+    }
+
+    /*Change Head password*/
+
+
     /*------------------------------------------------- /For Headers----------------------------------------------------------*/
     public interface VolleyResponseListener {
         void onSuccess(String response);

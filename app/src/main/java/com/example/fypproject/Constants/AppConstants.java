@@ -17,4 +17,6 @@ public class AppConstants {
     public static String post_by_head="/post_by_head.php";
 
  public static String sendParentFeedback="/sendParentFeedback.php";
+ public static String bringHeadData="/bringHeadData.php";
+ public static String changepassword="/changepassword.php";
 }
