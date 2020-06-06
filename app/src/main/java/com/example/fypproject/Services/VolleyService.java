@@ -12,6 +12,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.fypproject.Model.ChildModel;
 import com.example.fypproject.Model.DutiesModel;
+import com.example.fypproject.Model.Parents_Model;
 import com.example.fypproject.Model.Worker;
 
 import java.util.HashMap;
@@ -484,6 +485,73 @@ public void teamLoginActivity(String url, final Worker workerObj, final VolleyRe
                     params.put("id",workerObj.getId());
                     params.put("duty_des",workerObj.getDuty_des());
                     params.put("status",workerObj.getStatus());
+
+
+
+
+                    return params;
+                }
+            };
+            queue.add(req);
+
+
+
+        }catch (Exception e){
+            Log.v("see error responce",e.toString());
+
+        }
+
+    }
+
+    /*sendReportByHead*/
+
+
+
+    /*Send Parent Feedback*/
+
+    public void sendParentFeedback(String url, final Parents_Model parents_model, final VolleyResponseListener volleyResponseListener){
+        try {
+            final RequestQueue queue = Volley.newRequestQueue(mContext);
+
+            StringRequest req = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String s) {
+                            volleyResponseListener.onSuccess(s);
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    volleyResponseListener.onError(volleyError);
+                    Log.v("see error responce",volleyError.toString());
+                }
+            })
+
+            {
+
+
+                @Override
+                protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                    Log.v("see error responce",response.toString());
+                    return super.parseNetworkResponse(response);
+
+
+                }
+
+                @Override
+                protected Map<String, String> getParams(){
+                    HashMap<String, String> params = new HashMap<String, String>();
+
+                    String workerName,workerContact,workerCnic,workerFatherName,WorkerJobStatus;
+                    int workerTeam;
+
+                    http://alefcabs.com/dev/apis/pax_login.php?pax_mobile_number=0303&pax_password=alifcabs
+                    params.put("father_name",parents_model.getFeedback_father_name());
+                    params.put("date",parents_model.getFeedback_date());
+                    params.put("family_no",parents_model.getFeedbac_family_number());
+                    params.put("description",parents_model.getFeedback_decrition());
+                    params.put("cnic",parents_model.getFeedbac_cnic());
+                    params.put("address",parents_model.getFeedback_address());
 
 
 

@@ -38,6 +38,9 @@ public class Parent_Disk extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(Parent_Disk.this,Send_Parent_FeedBack.class);
+                startActivity(intent);
+
 
 
             }
