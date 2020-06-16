@@ -7,6 +7,8 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.location.Address;
+import android.location.Geocoder;
 import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,6 +31,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class AssignDuties extends AppCompatActivity {
@@ -177,4 +180,5 @@ public class AssignDuties extends AppCompatActivity {
         +" "+ " Address "+ed_assign_duties_address.getText().toString()+" "+" Date "+ date_lable.getText().toString());
 
     }
+
 }

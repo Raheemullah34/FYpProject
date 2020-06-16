@@ -64,6 +64,7 @@ public class Parents_Adapter extends RecyclerView.Adapter<Parents_Adapter.MyView
                 .putExtra("fathername",parents_model.getFeedback_father_name())
                 .putExtra("familyno",parents_model.getFeedbac_family_number())
                 .putExtra("des",parents_model.getFeedback_decrition())
+                .putExtra("address",parents_model.getFeedback_address())
                 .putExtra("date",parents_model.getFeedback_date()));
 
             }

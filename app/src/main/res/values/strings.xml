@@ -80,5 +80,6 @@
     <string name="email_txt">Email</string>
     <string name="password_txt">Password</string>
     <string name="default_notification_channel_id">845848</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
