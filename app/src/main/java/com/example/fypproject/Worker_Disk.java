@@ -73,6 +73,13 @@ public class Worker_Disk extends AppCompatActivity {
         btn_logut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                FirebaseMessaging.getInstance().unsubscribeFromTopic(worker.getWorkerTeam()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(getApplicationContext(),"Success"+worker.getWorkerTeam(), Toast.LENGTH_LONG).show();
+                    }
+                });
                 mySharePreferences.saveheadlogin(Worker_Disk.this,false);
                 startActivity(new Intent(Worker_Disk.this, Main_Menue.class));
             }

@@ -32,7 +32,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NonNull final RemoteMessage remoteMessage) {
 
 
-        Log.d("msg", "onMessageReceived: " + remoteMessage.toString());
+        Log.d("msg", "onMessageReceived: " + remoteMessage.getData().toString());
 
         if (remoteMessage.getData().size()>0){
             Intent intent = new Intent(this, LoginActivity.class);

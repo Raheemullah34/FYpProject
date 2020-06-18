@@ -13,6 +13,8 @@ import com.example.Duties;
 import com.example.Main_Menue;
 import com.example.TeamHeadLocations;
 import com.example.fypproject.SharePreferences.MySharePreferences;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class AdminPanel extends AppCompatActivity  implements View.OnClickListener {
 
@@ -40,7 +42,14 @@ public class AdminPanel extends AppCompatActivity  implements View.OnClickListen
 
       //Registor
 
-        btn_R_Worker.setOnClickListener(this);
+        FirebaseMessaging.getInstance().subscribeToTopic("admin").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
+            }
+        });
+
+                btn_R_Worker.setOnClickListener(this);
         btn_A_Duty.setOnClickListener(this);
         btn_R_Child.setOnClickListener(this);
         btn_L_Team_Worker.setOnClickListener(this);
@@ -70,7 +79,12 @@ public class AdminPanel extends AppCompatActivity  implements View.OnClickListen
                 startActivity(new Intent(AdminPanel.this,View_Report_Disk.class));
                 break;
             case R.id.btn_logout:
+                FirebaseMessaging.getInstance().unsubscribeFromTopic("admin").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
 
+                    }
+                });
                 sharePreferences.saveLoginStatus(AdminPanel.this,false);
                 startActivity(new Intent(AdminPanel.this, Main_Menue.class));
                 break;

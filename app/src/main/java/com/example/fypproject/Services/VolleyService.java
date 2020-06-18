@@ -485,6 +485,7 @@ public void teamLoginActivity(String url, final Worker workerObj, final VolleyRe
                     params.put("id",workerObj.getId());
                     params.put("duty_des",workerObj.getDuty_des());
                     params.put("status",workerObj.getStatus());
+                    params.put("address",workerObj.getDuty_address());
 
 
 

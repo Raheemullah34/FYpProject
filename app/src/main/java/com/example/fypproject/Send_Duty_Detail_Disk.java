@@ -106,6 +106,7 @@ public class Send_Duty_Detail_Disk extends AppCompatActivity {
                     dutiesModel.setId(idhere);
                     dutiesModel.setStatus(duty_status);
                     dutiesModel.setDuty_des(ed_S_DutyDetail.getText().toString().trim());
+                    dutiesModel.setDuty_address(tv_location.getText().toString().trim());
 
 
                     volleyService.postReportByHead(AppConstants.domain_url + AppConstants.directory + AppConstants.post_by_head, dutiesModel
